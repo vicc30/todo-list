@@ -50,13 +50,23 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
+/***/ "./src/common/constructor.js":
+/*!***********************************!*\
+  !*** ./src/common/constructor.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Project\": () => (/* binding */ Project),\n/* harmony export */   \"Task\": () => (/* binding */ Task)\n/* harmony export */ });\n//Constructor for new project\nclass Project {\n    constructor(name) {\n        this.projectName = name;\n        this.tasks = [];\n        console.log(this.projectName, this.tasks);\n        this.projectInfo = () => {\n            return (this.projectName, this.tasks);\n        }\n    }\n}\n//Constructor for new Task\nclass Task {\n    constructor(title, description, dueDate, priority) {\n        this.taskTitle = title;\n        this.taskDesc = description;\n        this.taskDate = dueDate;\n        this.taskPriority = priority;\n        this.checked = false;\n    }\n}\n\n\n//# sourceURL=webpack://todo-list/./src/common/constructor.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nconsole.log(\"Good\");\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _common_constructor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/constructor */ \"./src/common/constructor.js\");\n//Import styles\n\n//Import constructor for new Project and new Class\n\n\n//Set all projects to null at the beggining\nlet allProjects = [];\n\n//Creates some sample data\n//Programming Project\nallProjects.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Project('Programming'));\nallProjects[0].tasks.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Task('To Do App', 'Make the application as TOP instructions', '05/02/21', 'high'));\nallProjects[0].tasks.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Task('Library Project', 'Make the application as TOP instructions', '05/01/21', 'high'));\n//Home Project\nallProjects.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Project('Home'));\nallProjects[1].tasks.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Task('Shop', 'Shop the meals', '05/02/21', 'normal'));\nallProjects[1].tasks.push(new _common_constructor__WEBPACK_IMPORTED_MODULE_1__.Task('Paint the house', 'Buy all needed', '21/02/21', 'low'));\n//Log for project info\nconsole.log(allProjects[0].projectInfo());\nconsole.log(allProjects[1].projectInfo());\nconsole.log(\"Good\");\n\n//Render project logic\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ })
 
