@@ -3,9 +3,8 @@ export class Project {
     constructor(name) {
         this.projectName = name;
         this.tasks = [];
-        console.log(this.projectName, this.tasks);
         this.projectInfo = () => {
-            return (this.projectName, this.tasks);
+            return (this.tasks);
         }
     }
 }
