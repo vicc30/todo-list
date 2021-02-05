@@ -12,8 +12,8 @@ allProjects[0].tasks.push(new Task('Library Project', 'Make the application as T
 allProjects.push(new Project('Home'));
 allProjects[1].tasks.push(new Task('Shop', 'Shop the meals', '05/02/21', 'normal'));
 allProjects[1].tasks.push(new Task('Paint the house', 'Buy all needed', '21/02/21', 'low'));
-allProjects[1].tasks.push(new Task('Paint the house', 'Buy all needed', '21/02/21', 'low'));
-allProjects[1].tasks.push(new Task('Paint the house', 'Buy all needed', '21/02/21', 'low'));
-allProjects[1].tasks.push(new Task('Paint the house', 'Buy all needed', '21/02/21', 'low'));
+allProjects[1].tasks.push(new Task('Buy some clothes', 'Buy clothes', '21/02/21', 'low'));
+allProjects[1].tasks.push(new Task('Plant a tree', 'Buy a tree', '21/02/21', 'low'));
+allProjects[1].tasks.push(new Task('Make something', 'Buy all ', '21/02/21', 'low'));
 
 export default allProjects;

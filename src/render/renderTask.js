@@ -42,7 +42,7 @@ const renderTask = (allProjects) => {
                 <td>${task.taskDesc}</td>
                 <td>${task.taskDate}</td>
                 <td>${task.taskPriority}</td>
-                <td><span class="badge rounded-pill bg-danger">-</span>
+                <td><a class="remove-task" data-remove='${name},${task.taskTitle}'><span class="badge rounded-pill bg-danger">-</span>
                     <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>
                 </td>
             </tr>

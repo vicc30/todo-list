@@ -28,11 +28,40 @@
             </div>
             <div class="row mb-3">
                 <div class="col-12 col-md-3">
-                    <button type="button" class="btn btn-primary">New Project</button>
-                    <button type="button" class="btn btn-danger">Remove Project</button>
+                    <!--New project button and modal-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#newProjectModal">New Project</button>
+                    <!-- new Project Modal -->
+                    <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="newProjectModalLabel">New Project</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="newProjectForm">
+                                        <div class="form-group">
+                                            <label for="projectTitle">Title of the Project</label>
+                                            <input type="text" class="form-control" id="projectTitle"
+                                                placeholder="Type the name of new Project">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="new-project" data-bs-dismiss="modal">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-danger" id="remove-project">Remove Project</button>
                 </div>
                 <div class="col-12 col-md-9">
-                    <button type="button" class="btn btn-primary">New Task</button>
+                    <button type="button" class="btn btn-primary" id="new-task">New Task</button>
                 </div>
             </div>
             <div class="row">
