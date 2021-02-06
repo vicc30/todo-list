@@ -5,7 +5,6 @@ const renderTask = (allProjects) => {
         var tasks = element.tasks;
         //Selects projectName
         var name = element.projectName;
-        console.log(name);
 
         /**Select tabContent and add head for each project
          * Then map each task and render in tbody-projectName

@@ -16,16 +16,17 @@ reset(allProjects);
 
 //Initialize handler events
 //Add Project
-document.getElementById('new-project').onclick = (e) => {
+document.getElementById('new-project').onclick = () => {
     addProject();
     //Re render items
     reset(allProjects);
 }
-document.getElementById('remove-project').onclick = (e) => {
-    removeProject();
+document.getElementById('remove-project').onclick = () => {
+    removeProject(allProjects);
+    reset(allProjects);
 }
 document.getElementById('new-task').onclick = () => {
-    addTask();
+    addTask(allProjects);
     reset(allProjects);
 }
 

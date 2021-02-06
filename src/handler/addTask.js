@@ -1,12 +1,10 @@
-import allProjects from '../common/data';
 import { Task } from '../common/constructor';
 
-const newTask = () => {
+const newTask = (allProjects) => {
     //Selects the project name with active class and get the text content of anchor tag
     var project = document.querySelector('.list-group-item.active')
         .firstChild
         .textContent;
-    console.log(project);
     //Looks trough allProject to find if the project name is equal to active name
     for (var i = 0; i < allProjects.length; i++) {
         //if true push new Task with the form entries
@@ -21,7 +19,6 @@ const newTask = () => {
             if (title != "" || description != "" || date != "") {
                 allProjects[i].tasks.push(new Task(title, description, date, priority));
             }
-            console.log(allProjects[i].tasks);
         }
     }
 }
