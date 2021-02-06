@@ -24,8 +24,9 @@ document.getElementById('new-project').onclick = (e) => {
 document.getElementById('remove-project').onclick = (e) => {
     removeProject();
 }
-document.getElementById('new-task').onclick = (e) => {
+document.getElementById('new-task').onclick = () => {
     addTask();
+    reset(allProjects);
 }
 
 //Multiple elements selector remove-task
