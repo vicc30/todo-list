@@ -32,7 +32,7 @@ const renderTask = (allProjects) => {
         tasks.map((task) => {
             document.getElementById(`tbody-${name.toLowerCase()}`).innerHTML +=
                 `
-            <tr>
+            <tr id="delete-${task.taskTitle}">
                 <th scope="col">
                     <input class="form-check-input" type="checkbox" value=${task.checked}
                         aria-label="Checkbox for task">
@@ -41,7 +41,7 @@ const renderTask = (allProjects) => {
                 <td>${task.taskDesc}</td>
                 <td>${task.taskDate}</td>
                 <td>${task.taskPriority}</td>
-                <td><a class="remove-task" data-remove='${name},${task.taskTitle}'><span class="badge rounded-pill bg-danger">-</span>
+                <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'><span class="badge rounded-pill bg-danger">Remove</span>
                     <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>
                 </td>
             </tr>

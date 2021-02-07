@@ -31,13 +31,14 @@ document.getElementById('new-task').onclick = () => {
 }
 
 //Multiple elements selector remove-task
-var task = document.getElementsByClassName('remove-task');
-for (var i = 0; i < task.length; i++) {
-    task[i].addEventListener("click", (e) => {
-        //get data project name and task name
+document.querySelectorAll('.remove-task').forEach(element => {
+    element.addEventListener('click', e => {
+        console.log("clicked");
+        //get data project name  and task name
         var str = e.currentTarget.getAttribute('data-remove').split(',');
         var project = str[0];
         var task = str[1];
-        removeTask(project, task);
+        removeTask(project, task, allProjects);
     });
-}
+});
+
