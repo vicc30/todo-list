@@ -20,17 +20,22 @@ document.getElementById('new-project').onclick = () => {
     addProject();
     //Re render items
     reset(allProjects);
+    multipleListener();
 }
 document.getElementById('remove-project').onclick = () => {
     removeProject(allProjects);
     reset(allProjects);
+    multipleListener();
 }
 document.getElementById('new-task').onclick = () => {
     addTask(allProjects);
     reset(allProjects);
+    multipleListener();
 }
 
-//Multiple elements selector remove-task
+//Query selector for remove button for each task.
+const multipleListener = () => {
+   //Multiple elements selector remove-task
 document.querySelectorAll('.remove-task').forEach(element => {
     element.addEventListener('click', e => {
         console.log("clicked");
@@ -40,5 +45,8 @@ document.querySelectorAll('.remove-task').forEach(element => {
         var task = str[1];
         removeTask(project, task, allProjects);
     });
-});
+}); 
+}
+
+multipleListener();
 
