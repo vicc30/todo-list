@@ -1,4 +1,5 @@
 import { Task } from '../common/constructor';
+import { localSave } from '../common/data';
 
 const newTask = (allProjects) => {
     //Selects the project name with active class and get the text content of anchor tag
@@ -21,6 +22,8 @@ const newTask = (allProjects) => {
             }
         }
     }
+    //Save new data on local storage
+    localSave(allProjects);
 }
 
 export default newTask;

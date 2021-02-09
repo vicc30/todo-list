@@ -3,9 +3,6 @@ export class Project {
     constructor(name) {
         this.projectName = name;
         this.tasks = [];
-        this.projectInfo = () => {
-            return (this.tasks);
-        }
     }
 }
 //Constructor for new Task

@@ -1,4 +1,6 @@
 import reset from '../render/reset';
+import { localSave } from '../common/data';
+
 const removeTask = (project, task, allProjects) => {
 
     console.log("clicked remove task to remove " + project + " project, and " + task + " task");
@@ -14,6 +16,8 @@ const removeTask = (project, task, allProjects) => {
             }
         }
     }
+    //Save data on local storage
+    localSave(allProjects);
     reset(allProjects);
     //After rendering again it adds event listener for each button.
     document.querySelectorAll('.remove-task').forEach(element => {
