@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
 </head>
 
 <body>
     <!--Navbar just text -->
     <nav class="navbar fixed-top navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="#">
                 To Do List App!
             </a>
         </div>
@@ -29,17 +26,14 @@
             <div class="row mb-3">
                 <div class="col-12 col-md-3">
                     <!--New project button and modal-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#newProjectModal">New Project</button>
+                    <button type="button" class="btn btn-primary" id="newProjectBtn">New Project</button>
                     <!-- new Project Modal -->
-                    <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectModalLabel"
-                        aria-hidden="true">
+                    <div class="modal fade" id="newProjectModal">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="newProjectModalLabel">New Project</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close">X</button>
                                 </div>
                                 <div class="modal-body">
                                     <form id="newProjectForm">
@@ -51,10 +45,8 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" id="new-project"
-                                        data-bs-dismiss="modal">Save changes</button>
+                                    <button type="button" class="btn btn-secondary close">Close</button>
+                                    <button type="button" class="btn btn-primary" id="new-project">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -62,17 +54,14 @@
                     <button type="button" class="btn btn-danger" id="remove-project">Remove Project</button>
                 </div>
                 <div class="col-12 col-md-9">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#newTaskModal">New Task</button>
+                    <button type="button" class="btn btn-primary" id="newTaskBtn">New Task</button>
                     <!-- new Task Modal -->
-                    <div class="modal fade" id="newTaskModal" tabindex="-1" aria-labelledby="newTaskModalLabel"
-                        aria-hidden="true">
+                    <div class="modal fade" id="newTaskModal">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="newTaskModalLabel">New Task</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close">X</button>
                                 </div>
                                 <div class="modal-body">
                                     <form id="newTaskForm">
@@ -102,8 +91,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary close">Close</button>
                                     <button type="button" class="btn btn-primary" id="new-task" data-bs-dismiss="modal"
                                         id="new-task">Save changes</button>
                                 </div>
@@ -130,9 +118,6 @@
     <footer>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 

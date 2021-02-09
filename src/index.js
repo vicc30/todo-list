@@ -2,7 +2,7 @@
 //Import styles
 import './styles/style.css';
 //import data handlers
-import { data, localSave, removeLocal } from './common/data';
+import { data, removeLocal } from './common/data';
 //Import reset module
 import reset from './render/reset';
 //Import onclick handlers
@@ -10,6 +10,7 @@ import addProject from './handler/addProject';
 import removeProject from './handler/removeProject';
 import addTask from './handler/addTask';
 import removeTask from './handler/removeTask';
+import { projectModal, taskModal } from './handler/modal';
 
 //Initialize render projects then tasks.
 reset(data);
@@ -50,4 +51,5 @@ const multipleListener = () => {
 }
 
 multipleListener();
-
+projectModal();
+taskModal();
