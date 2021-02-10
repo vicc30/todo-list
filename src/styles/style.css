@@ -365,6 +365,11 @@ th {
   border: 0;
   border-radius: 0.25rem;
   opacity: 0.5;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close {
+  margin-right: .5rem;
 }
 .modal-title {
   margin-bottom: 0;
@@ -398,7 +403,9 @@ th {
 /* Form */
 form {
   display: block;
-  margin-top: 0em;
+}
+form div {
+  margin: .5rem 0;
 }
 label {
   display: inline-block;

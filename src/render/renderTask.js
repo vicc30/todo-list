@@ -1,4 +1,5 @@
 const renderTask = (allProjects) => {
+    console.log(allProjects);
     //Select all projects and for each calls renderItem
     allProjects.forEach((element) => {
         //Selects each task object
