@@ -8,9 +8,11 @@ const renderProjects = (allProjects) => {
             `
             <a class="list-group-item list-group-item-action" id="list-${project.projectName.toLowerCase()}-list"
                 data-bs-toggle="list" href="#list-${project.projectName.toLowerCase()}" role="tab"
-                aria-controls="${project.projectName.toLowerCase()}">${project.projectName} <span
-                    class="badge rounded-pill bg-secondary">${projectLength}</span>
-            <span class="visually-hidden">number of tasks in ${project.projectName}</span></a>
+                aria-controls="${project.projectName.toLowerCase()}"> 
+                ${project.projectName} 
+                <span class="badge rounded-pill bg-secondary">${projectLength}</span>
+                <span class="visually-hidden">number of tasks in ${project.projectName}</span>
+            </a>
         `
         );
     }).join('');

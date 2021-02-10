@@ -15,7 +15,7 @@ const renderTask = (allProjects) => {
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col"><i class="fas fa-tasks"></i></th>
                             <th>Title</th>
                             <th>Description</th>
                             <th>Due Date</th>
@@ -41,7 +41,7 @@ const renderTask = (allProjects) => {
                 <td>${task.taskDesc}</td>
                 <td>${task.taskDate}</td>
                 <td>${task.taskPriority}</td>
-                <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'><span class="badge rounded-pill bg-danger">Remove</span>
+                <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'><i class="far fa-trash-alt"></i>
                     <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>
                 </td>
             </tr>

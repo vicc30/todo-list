@@ -51,7 +51,11 @@ export const taskModal = () => {
 
     // When the user clicks on the button, open the modal
     btn.onclick = () => {
-        modal.style.display = "block";
+        if (document.querySelector('.list-group-item.active') != null) {
+            modal.style.display = "block";
+        } else {
+            alert("Please select a project");
+        }
     }
 
     // When the user clicks on (x) or close, close the modal

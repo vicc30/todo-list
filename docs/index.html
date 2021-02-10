@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -12,7 +16,7 @@
     <nav class="navbar fixed-top navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                To Do List App!
+                <span><i class="far fa-calendar-alt"></i></span> To Do List App!
             </a>
         </div>
     </nav>
@@ -26,7 +30,8 @@
             <div class="row mb-3">
                 <div class="col-12 col-md-3">
                     <!--New project button and modal-->
-                    <button type="button" class="btn btn-primary" id="newProjectBtn">New Project</button>
+                    <button type="button" class="btn btn-primary" id="newProjectBtn"><i class="fas fa-plus-circle"></i>
+                        New Project</button>
                     <!-- new Project Modal -->
                     <div class="modal fade" id="newProjectModal">
                         <div class="modal-dialog">
@@ -51,10 +56,16 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-danger" id="remove-project">Remove Project</button>
+                    <button type="button" class="btn btn-danger" id="remove-project">
+                        <i class="fas fa-minus-circle"></i>
+                        Remove Project
+                    </button>
                 </div>
                 <div class="col-12 col-md-9">
-                    <button type="button" class="btn btn-primary" id="newTaskBtn">New Task</button>
+                    <button type="button" class="btn btn-primary" id="newTaskBtn">
+                        <i class="far fa-check-circle"></i>
+                        New Task
+                    </button>
                     <!-- new Task Modal -->
                     <div class="modal fade" id="newTaskModal">
                         <div class="modal-dialog">
@@ -115,8 +126,11 @@
             </div>
         </div>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div>
+            <p>Made by <a href="https://github.com/vicc30">VicC</a> - View <a href="https://github.com/vicc30/todo-list">
+                source code <i class="fab fa-github"></i></a></p>
+        </div>
     </footer>
     <script src="main.js"></script>
 </body>
