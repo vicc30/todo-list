@@ -1,5 +1,6 @@
 import reset from '../render/reset';
 import { localSave } from '../common/data';
+import tab from './tab';
 
 const removeTask = (project, task, allProjects) => {
 
@@ -19,6 +20,7 @@ const removeTask = (project, task, allProjects) => {
     //Save data on local storage
     localSave(allProjects);
     reset(allProjects);
+    tab();
     //After rendering again it adds event listener for each button.
     document.querySelectorAll('.remove-task').forEach(element => {
         element.addEventListener('click', e => {

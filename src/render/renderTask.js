@@ -10,7 +10,7 @@ const renderTask = (allProjects) => {
          * Then map each task and render in tbody-projectName
          **/
         document.getElementById('nav-tabContent').innerHTML +=
-            `<div class="tab-pane fade show" id="list-${name.toLowerCase()}" role="tabpanel"
+            `<div class="tab-pane fade show" id="list-${name.toLowerCase()}"
                 aria-labelledby="list-${name.toLowerCase()}-list">
                 <table class="table table-striped">
                     <thead>

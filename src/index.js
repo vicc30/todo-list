@@ -11,6 +11,7 @@ import removeProject from './handler/removeProject';
 import addTask from './handler/addTask';
 import removeTask from './handler/removeTask';
 import { projectModal, taskModal } from './handler/modal';
+import tab from './handler/tab';
 
 //Initialize render projects then tasks.
 reset(data);
@@ -21,17 +22,20 @@ document.getElementById('new-project').onclick = () => {
     addProject(data);
     //Re render items
     reset(data);
+    tab();
     multipleListener();
 }
 document.getElementById('remove-project').onclick = () => {
     removeProject(data);
     reset(data);
     removeLocal(data);
+    tab();
     multipleListener();
 }
 document.getElementById('new-task').onclick = () => {
     addTask(data);
     reset(data);
+    tab();
     multipleListener();
 }
 
@@ -50,6 +54,7 @@ const multipleListener = () => {
     });
 }
 
-multipleListener();
 projectModal();
 taskModal();
+tab();
+multipleListener();
