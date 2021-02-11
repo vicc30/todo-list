@@ -278,6 +278,16 @@ table > :not(caption) > * > * {
   background-color: rgba(0, 0, 0, 0.05);
   color: #212529;
 }
+/*Class priority*/
+.high {
+  color: #bb2d3b !important;
+}
+.medium {
+  color: darkgoldenrod !important;
+}
+.low {
+  color: darkgreen !important;
+}
 tbody,
 td,
 tfoot,

@@ -38,10 +38,10 @@ const renderTask = (allProjects) => {
                     <th scope="col">
                         <input class="form-check-input" type="checkbox" id="check-${name}-${task.taskTitle}">
                     </th>
-                    <td>${task.taskTitle}</td>
+                    <td class="${task.taskPriority}">${task.taskTitle}</td>
                     <td>${task.taskDesc}</td>
                     <td>${task.taskDate}</td>
-                    <td>${task.taskPriority}</td>
+                    <td class="${task.taskPriority}">${task.taskPriority}</td>
                     <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'>
                         <i class="far fa-trash-alt"></i>
                         <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>

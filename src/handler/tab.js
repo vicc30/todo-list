@@ -14,7 +14,6 @@ const tab = () => {
                 //select current clicked as target
                 const target = e.currentTarget;
                 //Adds class active to target
-                console.log(target.id);
                 target.classList.toggle("active");
                 //Search for tab-pane
                 document.querySelectorAll('.tab-pane').forEach(tab => {

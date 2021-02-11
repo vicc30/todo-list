@@ -1,10 +1,9 @@
 import reset from '../render/reset';
 import { localSave } from '../common/data';
 import tab from './tab';
+import checkRender from './checkBox';
 
 const removeTask = (project, task, allProjects) => {
-
-    console.log("clicked remove task to remove " + project + " project, and " + task + " task");
 
     //Looks trough allProjects to find if the project name is equal to active name
     for (var i = 0; i < allProjects.length; i++) {
@@ -20,6 +19,7 @@ const removeTask = (project, task, allProjects) => {
     //Save data on local storage
     localSave(allProjects);
     reset(allProjects);
+    checkRender(allProjects);
     tab();
     //After rendering again it adds event listener for each button.
     document.querySelectorAll('.remove-task').forEach(element => {
