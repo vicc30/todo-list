@@ -22,6 +22,7 @@ const renderTask = (allProjects) => {
                             <th>Due Date</th>
                             <th>Priority</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody id="tbody-${name.toLowerCase()}">             
@@ -29,23 +30,27 @@ const renderTask = (allProjects) => {
                 </table>
             </div>
         `;
-        /**Maps task in each project and appends it */
+        /**Maps task in each project and appends it as a table */
         tasks.map((task) => {
             document.getElementById(`tbody-${name.toLowerCase()}`).innerHTML +=
-                `
-            <tr id="delete-${task.taskTitle}">
-                <th scope="col">
-                    <input class="form-check-input" type="checkbox" value=${task.checked}
-                        aria-label="Checkbox for task">
-                </th>
-                <td>${task.taskTitle}</td>
-                <td>${task.taskDesc}</td>
-                <td>${task.taskDate}</td>
-                <td>${task.taskPriority}</td>
-                <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'><i class="far fa-trash-alt"></i>
-                    <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>
-                </td>
-            </tr>
+            `
+                <tr id="delete-${task.taskTitle}">
+                    <th scope="col">
+                        <input class="form-check-input" type="checkbox" id="check-${name}-${task.taskTitle}">
+                    </th>
+                    <td>${task.taskTitle}</td>
+                    <td>${task.taskDesc}</td>
+                    <td>${task.taskDate}</td>
+                    <td>${task.taskPriority}</td>
+                    <td><a class="remove-task btn" data-remove='${name},${task.taskTitle}'>
+                        <i class="far fa-trash-alt"></i>
+                        <span class="visually-hidden">Remove task ${task.taskTitle}</span></a>
+                    </td>
+                    <td><a class="edit-task btn" data-edit='${name},${task.taskTitle}'>
+                        <i class="fas fa-edit"></i>
+                        <span class="visually-hidden">Edit task ${task.taskTitle}</span></a>
+                    </td>
+                </tr>
             `
         });
     });

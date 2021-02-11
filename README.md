@@ -25,16 +25,16 @@ This project is part of [Odin Project](https://www.theodinproject.com/lessons/to
         }
     ```
 - [x] Brainstorm what kind of properties your todo-items are going to have. At a minimum they should have a title, description, dueDate and priority. You might also want to include notes or even a checklist.
-  - It was made by making the two classes and the object ends with this format to be handled by local storage:
-  ```JSON
+  - It was made by making the two classes and the object ends as an array of objects with this format to be handled by local storage:
+  ```javascript
     [
         {
-            Project Name: string,
+            projectName: string,
             tasks: [
                 {
-                    Task Title: string,
-                    Description: string,
-                    Due Date: string,
+                    taskTitle: string,
+                    description: string,
+                    dueDate: string,
                     checked: boolean
                 }
             ]
@@ -50,15 +50,19 @@ This project is part of [Odin Project](https://www.theodinproject.com/lessons/to
   - The interface and injection of DOM are handled by files inside `/src/render` with js files to render projects / tasks or reset UI.
 - [ ] The look of the User Interface is up to you, but it should be able to do the following:
   1. View all projects
-  2. View all todos in each project (probably just the title and duedate.. perhaps changing color for different priorities)
-  3. Expand a single todo to see/edit its details
-  4. Delete a todo
+    - All Projects are rendered by default. As you select a project it renders each task for a project. 
+  3. View all todos in each project (probably just the title and duedate.. perhaps changing color for different priorities)
+     - All todos tasks are rendered when clicked each project. 
+  4. Expand a single todo to see/edit its details
+  5. Delete a todo
+    - Button delete on each task is supplied and handled by `/src/handler/removeTask.js`
+    - Button delete project is global and is handled by `/src/handler/removeProject.js`
 - [x] Use localStorage to save user’s projects and todos between sessions.
   - localStorage is used in `/src/common/data.js` to save and retrieve all data needed.
 - [x] Since you are probably already using webpack, adding external libraries from npm is a cinch!
   - Used [webpack](https://webpack.js.org/) with basic configuration.
   - Changed output path in order to deploy gh-pages easily. 
-  ```JSON
+  ```javascript
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'docs'),

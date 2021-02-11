@@ -302,6 +302,10 @@ th {
   font-weight: bold;
   text-align: -internal-center;
 }
+td {
+  text-align: center;
+  vertical-align: inherit;
+}
 /*Modal*/
 .modal {
   display: none;

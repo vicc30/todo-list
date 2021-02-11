@@ -2,7 +2,7 @@
 //Import styles
 import './styles/style.css';
 //import data handlers
-import { data, removeLocal } from './common/data';
+import { data, removeLocal} from './common/data';
 //Import reset module
 import reset from './render/reset';
 //Import onclick handlers
@@ -12,6 +12,7 @@ import addTask from './handler/addTask';
 import removeTask from './handler/removeTask';
 import { projectModal, taskModal } from './handler/modal';
 import tab from './handler/tab';
+import { checkClick, checkRender } from './handler/checkBox';
 
 //Initialize render projects then tasks.
 reset(data);
@@ -58,3 +59,5 @@ projectModal();
 taskModal();
 tab();
 multipleListener();
+checkRender(data);
+checkClick(data);
