@@ -1,5 +1,6 @@
 const renderProjects = (allProjects) => {
     //Render Projects on list-tab
+    console.log(allProjects);
     document.getElementById('list-tab').innerHTML = allProjects.map((project) => {
         //Get the length of each project
         const projectLength = Object.keys(project.tasks).length;

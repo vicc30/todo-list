@@ -48,12 +48,13 @@ This project is part of [Odin Project](https://www.theodinproject.com/lessons/to
   - The data and constructors are located in `/src/common/` under the name of `constructor.js` and `data.js`
   - The event handlers are inside of `/src/handler` includes onclick events of add/remove Project, add/remove task, show modal, show table tabs.
   - The interface and injection of DOM are handled by files inside `/src/render` with js files to render projects / tasks or reset UI.
-- [ ] The look of the User Interface is up to you, but it should be able to do the following:
+- [x] The look of the User Interface is up to you, but it should be able to do the following:
   1. View all projects
     - All Projects are rendered by default. As you select a project it renders each task for a project. 
   3. View all todos in each project (probably just the title and duedate.. perhaps changing color for different priorities)
      - All todos tasks are rendered when clicked each project. 
   4. Expand a single todo to see/edit its details
+     - Added one button for each element to show pop up task with details. 
   5. Delete a todo
     - Button delete on each task is supplied and handled by `/src/handler/removeTask.js`
     - Button delete project is global and is handled by `/src/handler/removeProject.js`

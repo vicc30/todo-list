@@ -5,7 +5,6 @@ const checkRender = (data) => {
         //Selects projectName
         var name = project.projectName;
         tasks.forEach((task) => {
-            console.log(task.checked);
             document.getElementById(`check-${name}-${task.taskTitle}`).checked = task.checked;
         });
     });

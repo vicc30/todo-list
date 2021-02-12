@@ -75,3 +75,32 @@ export const taskModal = () => {
         }
     }
 }
+
+//Edit task Modal
+export const editModal = () => {
+    // Get the modal new project
+    var modal = document.getElementById("editTaskModal");
+
+    // Get the X element that closes the modal
+    var x = document.getElementsByClassName("btn-close")[2];
+
+    // Get the close button that closes the modal
+    var close = document.getElementsByClassName("close")[2];
+
+    // When the user clicks on (x) or close, close the modal
+
+    x.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    close.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}

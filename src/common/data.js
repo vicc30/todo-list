@@ -53,6 +53,4 @@ if (localStorage.length === 0) {
     data = getStorage();
 }
 
-console.log(data);
-
 export default data;
